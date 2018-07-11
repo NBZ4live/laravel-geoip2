@@ -1,25 +1,13 @@
-# GeoIP2 for Laravel 5.4-5.5
-
-##### Note: For Laravel 5.2-5.3 use version tagged 1.1.5 
+# GeoIP2 for Laravel 5.4+
 
 ## Installation
-
-0) As it is currently not published to packagist, you first need to reference this repo in the `composer.json` like so:
-``` json
-"repositories": [
-	{
-		"type": "git",
-		"url": "https://github.com/Hornet-Wing/laravel-geoip2"
-	}
-]
-```
 
 1) In order to install run the following composer command:
 
 ``` bash
 composer require nbz4live/laravel-geoip2
 ```
-##### Laravel 5.5 Install skip to step 4.
+##### Laravel 5.5+ Install skip to step 4.
 
 2) Open your `config/app.php` and add the following to the `providers` array:
 
