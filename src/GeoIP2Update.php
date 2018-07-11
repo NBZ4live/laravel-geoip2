@@ -22,7 +22,7 @@ class GeoIP2Update
     protected $storagePath;
     protected $products;
 
-    private $userId;
+    private $accountId;
     private $licenseKey;
 
     public function __construct(Config $config)
@@ -49,14 +49,11 @@ class GeoIP2Update
         $this->storagePath = $cfgStoragePath;
         $this->products = $this->config->get('geoip2.products');
 
-        $this->userId = $this->config->get('geoip2.user_id');
+        $this->accountId = $this->config->get('geoip2.account_id');
         $this->licenseKey = $this->config->get('geoip2.license_key');
 
-        if (empty($this->userId)) {
-            $this->userId = 999999;
-        }
-
-        if (empty($this->licenseKey)) {
+        if (empty($this->accountId) || empty($this->licenseKey)) {
+            $this->accountId = 999999;
             $this->licenseKey = '000000000000';
         }
     }
@@ -113,7 +110,7 @@ class GeoIP2Update
                 'query' => [
                     'db_md5' => $md5File,
                     'challenge_md5' => $md5Client,
-                    'user_id' => $this->userId,
+                    'account_id' => $this->accountId,
                     'edition_id' => $productId,
                 ],
                 'save_to' => $tmpFilepath,

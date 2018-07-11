@@ -37,17 +37,17 @@ return [
     | MaxMind User Authentication
     |--------------------------------------------------------------------------
     |
-    | You can specify the your MaxMind User Credentials which will be used
-    | to used with the update command and to requests to the GeoIP2 API.
+    | You can specify your MaxMind User Credentials which will be used
+    | with the update command for requests to the GeoIP2 API.
     | When left empty the GeoLite2 free credetials will be used by
     | default, which only allow for download of GeoLite2 free
     | databases but do not allow API calls.
     |
-    | @var user_id        integer|empty
+    | @var account_id        integer|empty
     | @var license_key    string
     |
     */
-    'user_id'     => '',
+    'account_id'     => '',
     'license_key' => '',
 
 
