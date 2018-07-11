@@ -54,10 +54,10 @@
         },
         "laravel": {
             "providers": [
-                "Nbz4live\\LaravelGeoIP2\\GeoIP2ServiceProvider"
+                "Nbz4live\\LaravelGeoIP2\\ServiceProvider"
             ],
             "aliases": {
-                "GeoIP2": "Nbz4live\\LaravelGeoIP2\\GeoIP2Facade"
+                "GeoIP2": "Nbz4live\\LaravelGeoIP2\\Facades\\GeoIP2"
             }
         }
     },

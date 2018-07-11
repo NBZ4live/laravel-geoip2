@@ -3,7 +3,7 @@ namespace Nbz4live\LaravelGeoIP2\Provider;
 
 use GeoIp2\Database\Reader;
 use GeoIp2\ProviderInterface;
-use Nbz4live\LaravelGeoIP2\GeoIP2Exception;
+use Nbz4live\LaravelGeoIP2\Exception;
 
 class DatabaseProvider implements ProviderInterface
 {
@@ -30,7 +30,7 @@ class DatabaseProvider implements ProviderInterface
      * @param array $arguments
      *
      * @return mixed
-     * @throws GeoIP2Exception
+     * @throws Exception
      */
     public function __call($name, $arguments)
     {
@@ -38,7 +38,7 @@ class DatabaseProvider implements ProviderInterface
         $ipAddress = array_shift($arguments);
 
         if (empty($this->readers[$key])) {
-            throw new GeoIP2Exception(sprintf('Missing "%s" database', $key));
+            throw new Exception(sprintf('Missing "%s" database', $key));
         }
 
         return $this->readers[$key]->$name($ipAddress);
