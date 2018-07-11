@@ -122,7 +122,13 @@ class GeoIP2Update
         }
         catch (ClientException $clientException)
         {
-            $this->output->writeln(sprintf('<error>Error updating database with Product ID "%s"</error>', $productId));
+            $this->output->writeln(sprintf(
+                '<error>Error updating database with Product ID "%s". Reason: "%d %s." Body: "%s"</error>',
+                $productId,
+                $clientException->getResponse()->getStatusCode(),
+                $clientException->getResponse()->getReasonPhrase(),
+                \str_replace("\n", '', $clientException->getResponse()->getBody()->getContents())
+            ));
 
             return false;
         }
