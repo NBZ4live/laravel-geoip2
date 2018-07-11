@@ -24,9 +24,7 @@ class ServiceProvider extends ServiceProvider
         $configPath = __DIR__ . '/config/geoip2.php';
         $this->publishes([$configPath => config_path('geoip2.php')]);
 
-        if (\method_exists($this, 'mergeConfigFrom')) {
-            $this->mergeConfigFrom($configPath, 'geoip2');
-        }
+        $this->mergeConfigFrom($configPath, 'geoip2');
     }
 
     /**
