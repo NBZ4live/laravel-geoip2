@@ -21,7 +21,7 @@ Nbz4live\LaravelGeoIP2\GeoIP2ServiceProvider::class,
 'GeoIP2' => Nbz4live\LaravelGeoIP2\GeoIP2Facade::class,
 ```
 
-4) Run the command below to publish the package:
+4) You can publish the config file by running (optional):
 
 ``` php
 $ php artisan vendor:publish --provider="Nbz4live\LaravelGeoIP2\GeoIP2ServiceProvider"
