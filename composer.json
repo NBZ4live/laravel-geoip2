@@ -1,5 +1,5 @@
 {
-    "name": "talkative/laravel-geoip2",
+    "name": "nbz4live/laravel-geoip2",
     "description": "Laravel wrapper for MaxMind GeoIP2",
     "keywords": [
         "laravel",
@@ -10,14 +10,22 @@
     "license": "MIT",
     "authors": [
         {
+            "name": "Sergey Fayngold",
+            "email": "sergey@faynhost.com"
+        },
+        {
             "name": "Jakub Srsen",
             "email": "jsrsen@talkative.uk"
+        },
+        {
+            "name": "Dave Hennigar",
+            "email": "dave.hennigar@gmail.com"
+        },
+        {
+            "name": "Csanad Novak",
+            "email": "csanad.novak@trendideas.com"
         }
     ],
-    "support": {
-        "source": "https://github.com/Hornet-Wing/laravel-geoip2",
-        "issues": "https://github.com/Hornet-Wing/laravel-geoip2/issues"
-    },
     "require": {
         "php": ">=5.4.0",
         "geoip2/geoip2": "~2.0",
@@ -32,12 +40,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Talkative\\LaravelGeoIP2\\": "src/"
+            "Nbz4live\\LaravelGeoIP2\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Talkative\\LaravelGeoIP2\\Test\\": "tests/"
+            "Nbz4live\\LaravelGeoIP2\\Test\\": "tests/"
         }
     },
     "extra": {
@@ -46,10 +54,10 @@
         },
         "laravel": {
             "providers": [
-                "Talkative\\LaravelGeoIP2\\GeoIP2ServiceProvider"
+                "Nbz4live\\LaravelGeoIP2\\GeoIP2ServiceProvider"
             ],
             "aliases": {
-                "GeoIP2": "Talkative\\LaravelGeoIP2\\GeoIP2Facade"
+                "GeoIP2": "Nbz4live\\LaravelGeoIP2\\GeoIP2Facade"
             }
         }
     },

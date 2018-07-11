@@ -1,16 +1,16 @@
 <?php
-namespace Talkative\LaravelGeoIP2;
+namespace Nbz4live\LaravelGeoIP2;
 
 use GeoIp2\WebService\Client;
 use Illuminate\Config\Repository as Config;
 use Illuminate\Http\Request;
-use Talkative\LaravelGeoIP2\Provider\DatabaseProvider;
-use Talkative\LaravelGeoIP2\Provider\LocalhostProvider;
+use Nbz4live\LaravelGeoIP2\Provider\DatabaseProvider;
+use Nbz4live\LaravelGeoIP2\Provider\LocalhostProvider;
 
 /**
  * Class GeoIP2
  *
- * @package Talkative\LaravelGeoIP2
+ * @package Nbz4live\LaravelGeoIP2
  *
  * @method \GeoIp2\Model\AnonymousIp    anonymousIp(string $ipAddress = null)
  * @method \GeoIp2\Model\City           city(string $ipAddress = null)
@@ -31,7 +31,7 @@ class GeoIP2
     /** @var \GeoIp2\ProviderInterface */
     private $provider;
 
-    /** @var \Talkative\LaravelGeoIP2\Provider\LocalhostProvider */
+    /** @var \Nbz4live\LaravelGeoIP2\Provider\LocalhostProvider */
     private $localhostProvider;
 
     protected $storagePath;

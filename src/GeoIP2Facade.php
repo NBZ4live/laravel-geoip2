@@ -1,12 +1,12 @@
 <?php
-namespace Talkative\LaravelGeoIP2;
+namespace Nbz4live\LaravelGeoIP2;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * Class GeoIP2Facade
  *
- * @package Talkative\LaravelGeoIP2
+ * @package Nbz4live\LaravelGeoIP2
  *
  * @method static \GeoIp2\Model\AnonymousIp    anonymousIp(string $ipAddress = null)
  * @method static \GeoIp2\Model\City           city(string $ipAddress = null)

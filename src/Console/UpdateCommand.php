@@ -1,9 +1,9 @@
 <?php
-namespace Talkative\LaravelGeoIP2\Console;
+namespace Nbz4live\LaravelGeoIP2\Console;
 
 use Illuminate\Config\Repository as Config;
 use Illuminate\Console\Command;
-use Talkative\LaravelGeoIP2\GeoIP2Update;
+use Nbz4live\LaravelGeoIP2\GeoIP2Update;
 
 class UpdateCommand extends Command
 {

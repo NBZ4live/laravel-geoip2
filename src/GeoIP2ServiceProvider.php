@@ -1,9 +1,9 @@
 <?php
 
-namespace Talkative\LaravelGeoIP2;
+namespace Nbz4live\LaravelGeoIP2;
 
 use Illuminate\Support\ServiceProvider;
-use Talkative\LaravelGeoIP2\Console\UpdateCommand;
+use Nbz4live\LaravelGeoIP2\Console\UpdateCommand;
 
 class GeoIP2ServiceProvider extends ServiceProvider
 {

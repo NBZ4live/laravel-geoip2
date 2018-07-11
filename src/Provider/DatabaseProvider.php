@@ -1,9 +1,9 @@
 <?php
-namespace Talkative\LaravelGeoIP2\Provider;
+namespace Nbz4live\LaravelGeoIP2\Provider;
 
 use GeoIp2\Database\Reader;
 use GeoIp2\ProviderInterface;
-use Talkative\LaravelGeoIP2\GeoIP2Exception;
+use Nbz4live\LaravelGeoIP2\GeoIP2Exception;
 
 class DatabaseProvider implements ProviderInterface
 {
