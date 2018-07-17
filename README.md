@@ -12,19 +12,19 @@ composer require nbz4live/laravel-geoip2
 2) Open your `config/app.php` and add the following to the `providers` array:
 
 ``` php
-Nbz4live\LaravelGeoIP2\GeoIP2ServiceProvider::class,
+Nbz4live\LaravelGeoIP2\ServiceProvider::class,
 ```
 
 3) In the same config/app.php and add the following to the aliases array:
 
 ``` php
-'GeoIP2' => Nbz4live\LaravelGeoIP2\GeoIP2Facade::class,
+'GeoIP2' => Nbz4live\LaravelGeoIP2\Facades\GeoIP2::class,
 ```
 
 4) You can publish the config file by running (optional):
 
 ``` php
-$ php artisan vendor:publish --provider="Nbz4live\LaravelGeoIP2\GeoIP2ServiceProvider"
+$ php artisan vendor:publish --provider="Nbz4live\LaravelGeoIP2\ServiceProvider"
 ```
 
 5) Run the update command to download the latest required databases

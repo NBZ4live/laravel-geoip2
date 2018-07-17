@@ -2,10 +2,10 @@
 
 namespace Nbz4live\LaravelGeoIP2;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Nbz4live\LaravelGeoIP2\Console\UpdateCommand;
 
-class ServiceProvider extends ServiceProvider
+class ServiceProvider extends BaseServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
