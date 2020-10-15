@@ -19,7 +19,7 @@ class LocalhostProvider implements ProviderInterface
     /**
      * @inheritdoc
      */
-    public function country(string $ipAddress)
+    public function country(string $ipAddress): \GeoIp2\Model\Country
     {
         return new Country($this->raw);
     }
@@ -27,7 +27,7 @@ class LocalhostProvider implements ProviderInterface
     /**
      * @inheritdoc
      */
-    public function city(string $ipAddress)
+    public function city(string $ipAddress): \GeoIp2\Model\City
     {
         return new City($this->raw);
     }

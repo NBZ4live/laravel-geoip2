@@ -47,7 +47,7 @@ class DatabaseProvider implements ProviderInterface
     /**
      * @inheritdoc
      */
-    public function country(string $ipAddress)
+    public function country(string $ipAddress): \GeoIp2\Model\Country
     {
         return $this->__call('country', [$ipAddress]);
     }
@@ -55,7 +55,7 @@ class DatabaseProvider implements ProviderInterface
     /**
      * @inheritdoc
      */
-    public function city(string $ipAddress)
+    public function city(string $ipAddress): \GeoIp2\Model\City
     {
         return $this->__call('city', [$ipAddress]);
     }
