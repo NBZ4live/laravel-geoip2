@@ -3,6 +3,7 @@ namespace Nbz4live\LaravelGeoIP2\Provider;
 
 use GeoIp2\Model\City;
 use GeoIp2\Model\Country;
+use GeoIp2\Model\Isp;
 use GeoIp2\ProviderInterface;
 
 class LocalhostProvider implements ProviderInterface
@@ -30,6 +31,16 @@ class LocalhostProvider implements ProviderInterface
     public function city(string $ipAddress): \GeoIp2\Model\City
     {
         return new City($this->raw);
+    }
+
+    /**
+     * @param $ipAddress
+     *
+     * @return Isp
+     */
+    public function isp($ipAddress)
+    {
+        return new Isp(array_merge(['ip_address' => $ipAddress], $this->raw));
     }
 
     /**
